@@ -105,6 +105,7 @@ a{
     height: 100vh;
     background: url(../images/background-image.png) no-repeat center center;
     background-size: cover;
+    background-attachment: fixed;
 }
 .home .container{
     height:100%;
