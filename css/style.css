@@ -422,3 +422,15 @@ a{
     margin-left:auto;
     margin-top: 20px;
 }
+
+/* footer */
+#footer{
+    background: var(--color--black);
+}
+.footer{
+    text-align: center;
+    color: var(--color--gray);
+    font-size: var(--font--small);
+    font-family: var(--font--opensans);
+    padding:15px 0;
+}
