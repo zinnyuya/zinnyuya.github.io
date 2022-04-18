@@ -421,6 +421,7 @@ a{
     font-size: var(--font--regular);
     margin-left:auto;
     margin-top: 20px;
+    cursor:pointer;
 }
 
 /* footer */
