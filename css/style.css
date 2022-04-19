@@ -31,6 +31,10 @@
     --color--gray:#979797;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a{
     text-decoration: none;
     color:inherit;
@@ -74,7 +78,8 @@ a{
 }
 
 #header.on{
-    background: var(--color--white);
+    background: #fff;
+    border-bottom: 1px solid #dadada;
 }
 #header.on .navbar__menu__item a{
     color: var(--color--black);
@@ -258,6 +263,10 @@ a{
     width:100px;
     height:100px;
 }
+.skill__graphic path{
+    stroke-dashoffset: 88;
+    stroke-dasharray: 88;
+}
 .skill__graphic img{
     width:44px;
 }
@@ -274,6 +283,20 @@ a{
     font-size: var(--font--regular);
     color: var(--color--gray);
     word-break:keep-all;
+}
+
+.about.show .skill__html path{
+    stroke-dashoffset: 0;
+    transition: all 0.5s ease 0.5s;
+}
+.about.show .skill__css path,
+.about.show .skill__jquery path{
+    stroke-dashoffset: 8.8;
+    transition: all 0.5s ease 0.5s;
+}
+.about.show .skill__js path{
+    stroke-dashoffset: 35.2;
+    transition: all 0.5s ease 0.5s;
 }
 
 /* work */
@@ -312,12 +335,22 @@ a{
     flex-wrap: wrap;
     justify-content: center;
     gap:28px;
+    transition: all 0.3s ease-out;
+}
+.work__list.ani-out{
+    opacity: 0;
+    transform: scale(0.99) ;
 }
 .work__list__item{
-    display: block;
+    display: none;
     width: 300px;
     position: relative;
     overflow: hidden;
+    opacity: 0;
+}
+.work__list__item.on{
+    opacity: 1;
+    display: block;
 }
 .work__item__img img{
     width: 100%;
@@ -423,6 +456,30 @@ a{
     cursor:pointer;
 }
 
+/* top */
+.top__btn{
+    width: 50px;
+    height: 50px;
+    background:var(--color--skyblue);
+    border-radius: 50%;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    cursor: pointer;
+    z-index: 10;
+    border:none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+.top__btn img{
+    width: 25px;
+}
+.top__btn.on{
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* footer */
 #footer{
     background: var(--color--black);
@@ -496,5 +553,15 @@ a{
     }
     .skill{
         width: calc(50% - 10px);
+    }
+
+    .top__btn{
+        width: 40px;
+        height: 40px;
+        right: 25px;
+        bottom: 25px;
+    }
+    .top__btn img{
+        width: 20px;
     }
 }

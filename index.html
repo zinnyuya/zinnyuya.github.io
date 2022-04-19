@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Shortcut Icon" type="image/ico" href="images/favi.png">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
     <title>진유정 - 포트폴리오</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
         <div id="header">
             <div class="container">
                 <div class="navbar">
-                    <h1 class="navbar__logo"><a href="index.html"><img src="images/logo.svg" alt="로고"></a></h1>
+                    <h1 class="navbar__logo"><a href="index.html"><img src="images/logo.svg" class="navbar__logo__img" alt="로고"></a></h1>
                     <ul class="navbar__menu">
                         <li class="navbar__menu__item"><a href="#home">Home</a></li>
                         <li class="navbar__menu__item"><a href="#about">About</a></li>
@@ -33,7 +33,7 @@
                             I keep learning because I want to do better. I always do my best. TRUST ME.
                         </span>
                     </div>
-                    <a href="" class="home__textbox__btn">Get Start !</a>
+                    <a href="#about" class="home__textbox__btn">Get Start !</a>
                 </div>
             </div>
         </section>
@@ -64,15 +64,15 @@
                 <div class="about__article">
                     <div class="article__title">MAIN SKILL</div>
                     <div class="skillset">
-                        <div class="skill">
+                        <div class="skill skill__html">
                             <div class="skill__graphic">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve"><path fill="none" stroke="#fe7a63" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M15.204,1.001C22.842,1.11,29,7.336,29,15c0,7.732-6.268,14-14,14C7.268,29,1,22.732,1,15C1,7.268,7.268,1,15,1"></path></svg>
                                 <img src="images/html_logo.png" alt="html">
                             </div>
                             <div class="skill__name">HTML</div>
-                            <div class="skill__desc">90%</div>
+                            <div class="skill__desc">100%</div>
                         </div>
-                        <div class="skill">
+                        <div class="skill skill__css">
                             <div class="skill__graphic">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve"><path fill="none" stroke="#009ce6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M15.204,1.001C22.842,1.11,29,7.336,29,15c0,7.732-6.268,14-14,14C7.268,29,1,22.732,1,15C1,7.268,7.268,1,15,1"></path></svg>
                                 <img src="images/css_logo.png" alt="CSS">
@@ -80,7 +80,7 @@
                             <div class="skill__name">CSS</div>
                             <div class="skill__desc">90%</div>
                         </div>
-                        <div class="skill">
+                        <div class="skill skill__jquery">
                             <div class="skill__graphic">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve"><path fill="none" stroke="#fea620" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M15.204,1.001C22.842,1.11,29,7.336,29,15c0,7.732-6.268,14-14,14C7.268,29,1,22.732,1,15C1,7.268,7.268,1,15,1"></path></svg>
                                 <img src="images/jquery_logo.png" alt="Jquery">
@@ -88,13 +88,13 @@
                             <div class="skill__name">Jquery</div>
                             <div class="skill__desc">90%</div>
                         </div>
-                        <div class="skill">
+                        <div class="skill skill__js">
                             <div class="skill__graphic">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve"><path fill="none" stroke="#ffde24" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M15.204,1.001C22.842,1.11,29,7.336,29,15c0,7.732-6.268,14-14,14C7.268,29,1,22.732,1,15C1,7.268,7.268,1,15,1"></path></svg>
                                 <img src="images/js_logo.png" alt="js">
                             </div>
                             <div class="skill__name">Javascript</div>
-                            <div class="skill__desc">70%</div>
+                            <div class="skill__desc">60%</div>
                         </div>
                     </div>
                 </div>
@@ -104,13 +104,13 @@
             <h2 class="section__title">WORK</h2>
             <div class="container">
                 <ul class="work__navi">
-                    <li class="work__navi__item on"><a href="javascript:;">All</a></li>
-                    <li class="work__navi__item"><a href="javascript:;">Responsive</a></li>
-                    <li class="work__navi__item"><a href="javascript:;">WEB</a></li>
-                    <li class="work__navi__item"><a href="javascript:;">Hybrid</a></li>
+                    <li class="work__navi__item on"><a href="javascript:;" onclick="categorize(this);">All</a></li>
+                    <li class="work__navi__item"><a href="javascript:;" onclick="categorize(this);">Responsive</a></li>
+                    <li class="work__navi__item"><a href="javascript:;" onclick="categorize(this);">WEB</a></li>
+                    <li class="work__navi__item"><a href="javascript:;" onclick="categorize(this);">Hybrid</a></li>
                 </ul>
                 <div class="work__list">
-                    <a href="https://www.halla.com/" class="work__list__item" data-type="responsive" target="_blank">
+                    <a href="https://www.halla.com/" class="work__list__item on" data-type="Responsive" target="_blank">
                         <div class="work__item__img">
                             <img src="images/halla-m.png" alt="한라 그룹">
                         </div>
@@ -122,7 +122,7 @@
                             </ul>
                         </div>
                     </a>
-                    <a href="http://www.mfac.or.kr/index_main.jsp" class="work__list__item" data-type="responsive" target="_blank">
+                    <a href="http://www.mfac.or.kr/index_main.jsp" class="work__list__item on" data-type="Responsive" target="_blank">
                         <div class="work__item__img">
                             <img src="images/mapo-m.png" alt="마포문화재단">
                         </div>
@@ -134,7 +134,7 @@
                             </ul>
                         </div>
                     </a>
-                    <a href="https://www.webup.co.kr/index.jsp" class="work__list__item" data-type="web" target="_blank">
+                    <a href="https://www.webup.co.kr/index.jsp" class="work__list__item on" data-type="WEB" target="_blank">
                         <div class="work__item__img">
                             <img src="images/webup-m.png" alt="웹업">
                         </div>
@@ -146,7 +146,7 @@
                             </ul>
                         </div>
                     </a>
-                    <a href="http://www.noriday.com/index.jsp" class="work__list__item" data-type="hybrid" target="_blank">
+                    <a href="http://www.noriday.com/index.jsp" class="work__list__item on" data-type="Hybrid" target="_blank">
                         <div class="work__item__img">
                             <img src="images/noriday-m.png" alt="노리데이">
                         </div>
@@ -158,7 +158,7 @@
                             </ul>
                         </div>
                     </a>
-                    <a href="http://www.globalphc.com/index.jsp" class="work__list__item" data-type="responsive" target="_blank">
+                    <a href="http://www.globalphc.com/index.jsp" class="work__list__item on" data-type="Responsive" target="_blank">
                         <div class="work__item__img">
                             <img src="images/phc-m.png" alt="PHC">
                         </div>
@@ -170,7 +170,7 @@
                             </ul>
                         </div>
                     </a>
-                    <a href="http://3sq.co.kr/" class="work__list__item" data-type="responsive" target="_blank">
+                    <a href="http://3sq.co.kr/" class="work__list__item on data-type="Responsive" target="_blank">
                         <div class="work__item__img">
                             <img src="images/3sq-m.png" alt="쓰리스퀘어">
                         </div>
@@ -182,7 +182,7 @@
                             </ul>
                         </div>
                     </a>
-                    <a href="http://www.k-ricelab.com/index.php" class="work__list__item" data-type="responsive" target="_blank">
+                    <a href="http://www.k-ricelab.com/index.php" class="work__list__item on" data-type="Responsive" target="_blank">
                         <div class="work__item__img">
                             <img src="images/rice-m.png" alt="정읍라이스랩">
                         </div>
@@ -194,7 +194,7 @@
                             </ul>
                         </div>
                     </a>
-                    <a href="http://www.bifan.kr/" class="work__list__item" data-type="responsive" target="_blank">
+                    <a href="http://www.bifan.kr/" class="work__list__item on" data-type="Responsive" target="_blank">
                         <div class="work__item__img">
                             <img src="images/bifan-m.png" alt="">
                         </div>
@@ -226,6 +226,9 @@
                 </form>
             </div>
         </section>
+        <button class="top__btn">
+            <img src="images/arrow-up.png" alt="위로">
+        </button>
         <div id="footer">
             <div class="container">
                 <div class="footer">
