@@ -30,12 +30,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// let workBtn = document.querySelectorAll('.work__navi__item');
-// console.log(workBtn);
-// workBtn.addEventListener('click',(e) => {
-//     let type = e.target;
-//     console.log(type);
-// })
 function categorize(e){
     const type = e.textContent;
     const projects = document.querySelectorAll('.work__list__item');
